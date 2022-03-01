@@ -44,15 +44,15 @@ const fortune = (ctx, body = null, status = 200) => {
 const app = new Koa();
 
 app.use(cors());
-// app.use(
-//   cors({
-//     origin: "*",
-//     credentials: true,
-//     "Access-Control-Allow-Origin": true,
-//     allowMethods: ["GET", "POST", "PUT", "DELETE"],
-//     allowHeaders: ["Content-Type", "Authorization"],
-//   })
-// );
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+    "Access-Control-Allow-Origin": true,
+    allowMethods: ["GET", "POST", "PUT", "DELETE"],
+    allowHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // app.use(async (ctx, next) => {
 //   // ctx.response.set("Access-Control-Allow-Origin", "http://localhost:3000");
